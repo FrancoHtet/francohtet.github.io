@@ -11,7 +11,7 @@
 }
 
 body {
-    background: linear-gradient(to right, var(--lightBlue), var(--cyan));
+    background: linear-gradient(to right, var(--lightBlue), var(--cyan))
     
 }
 
@@ -158,7 +158,7 @@ nav {
 
 /* Parallax Two */
 .parallaxTwo {
-    background-image: url(./Pics/IMG_3967.jpg);
+    background-image: url(./Pics/snow.jpg);
 
     display: flex;
 
@@ -168,7 +168,7 @@ nav {
     background-repeat: no-repeat;
 
 
-    min-height: 85vh;
+    min-height: 90vh;
     width: auto;
 
 }
@@ -183,11 +183,39 @@ nav {
 
 
 
-/* School */
-#School {
-    background: url('./Pics/paper.jpg');
-    background-blend-mode: overlay;
+/* Education */
+#Education {
+    /* background: url('./Pics/paper.jpg');
+    background-blend-mode: overlay; */
+    background: linear-gradient(to right, rgb(234, 155, 52), rgb(243, 76, 118));
+    color: white;
+    padding-top: 50px;
 }
+
+#Education .section-title {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#Education .education-card{
+    background: rgb(63, 179, 221);
+    color: white;
+}
+
+#Education .experience-card{
+    background: rgb(60, 111, 241);
+    color: white;
+}
+
+.education-card, .experience-card, .skill-card {
+    transition: transform 0.3s;
+}
+
+.education-card:hover, .experience-card:hover, .skill-card:hover {
+    transform: scale(1.05);
+}
+
 
 
 
@@ -195,7 +223,7 @@ nav {
 /* Project */
 .project {
     background: linear-gradient(to right, rgb(234, 155, 52), rgb(243, 76, 118));
-
+    padding-top: 250px;
 }
 
 

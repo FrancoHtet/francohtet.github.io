@@ -1,4 +1,6 @@
-AOS.init()
+AOS.init({
+    // once: true,
+})
 
 $(document).ready(function () {
     // Close navbar on link click
