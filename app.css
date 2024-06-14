@@ -1,0 +1,248 @@
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Variables */
+:root {
+    --cyan: rgb(12, 224, 239);
+    --lightBlue: rgb(44, 63, 240);
+}
+
+body {
+    background: linear-gradient(to right, var(--lightBlue), var(--cyan));
+    
+}
+
+.container-fluid {
+    overflow-x: hidden;
+}
+
+
+
+/* NavBar */
+
+.navbar-hidden {
+    top: -100px;
+    /* Adjust based on navbar height */
+}
+
+.navbar {
+    transition: top 0.8s;
+
+}
+
+nav {
+    background: linear-gradient(to right, var(--lightBlue), var(--cyan));
+}
+
+@keyframes fadeInOnce {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+
+.fadeInOnce {
+    animation-name: fadeInOnce;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+
+}
+
+.nav-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    bottom: -2px; /* Position the underline at the bottom */
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-50%);
+    transition: width 0.1s ease;
+}
+
+
+
+.nav-link.hover-left:hover::after, .nav-link.hover-right:hover::after {
+    width: 100%;
+}
+
+
+
+
+/* ParallaxOne */
+.parallaxOne {
+    background-image: url(./Pics/IMG_3967.jpg);
+
+    display: flex;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    min-height: 85vh;
+    width: auto;
+
+}
+
+@media (max-width: 768px) {
+    .parallaxOne {
+        background-attachment: scroll;
+        /* Change to scroll for mobile devices */
+    }
+}
+
+
+
+/* About */
+#About {
+    background: linear-gradient(to right, rgb(12, 233, 218), rgb(135, 60, 241));
+}
+
+
+.WWWimage {
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+@keyframes changeText {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+
+    20% , 80%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+}
+
+.changing-text span {
+    display: inline-block;
+    animation: changeText 10s infinite;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Parallax Two */
+.parallaxTwo {
+    background-image: url(./Pics/IMG_3967.jpg);
+
+    display: flex;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    min-height: 85vh;
+    width: auto;
+
+}
+
+@media (max-width: 768px) {
+    .parallaxTwo {
+        background-attachment: scroll;
+        /* Change to scroll for mobile devices */
+    }
+}
+
+
+
+
+/* School */
+#School {
+    background: url('./Pics/paper.jpg');
+    background-blend-mode: overlay;
+}
+
+
+
+
+/* Project */
+.project {
+    background: linear-gradient(to right, rgb(234, 155, 52), rgb(243, 76, 118));
+
+}
+
+
+.project .row{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.project-card {
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+}
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: #d4d4d4;
+    text-decoration: none;
+}
+
+.footer .row{
+    padding-top: px;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%)
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
